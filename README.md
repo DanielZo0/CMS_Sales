@@ -1,15 +1,13 @@
 # CMZ Sales PDF Data Extraction
 
-A Python script for extracting sales data from PDF files using multiple PDF processing libraries.
+A simple Python script for extracting sales data from CMZ weekly sales PDF files.
 
 ## Features
 
-- Extract text content from PDF files
-- Extract tables from PDF files
-- Support for multiple PDF processing libraries (PyPDF2, pdfplumber)
-- Export results to Excel, CSV, or JSON formats
-- Comprehensive logging and error handling
-- Command-line interface for easy automation
+- Extract specific sales data from CMZ weekly sales PDFs
+- Support for pdfplumber library for reliable PDF processing
+- Export results to JSON format matching the required template
+- Simple and focused functionality
 
 ## Prerequisites
 
@@ -20,101 +18,108 @@ A Python script for extracting sales data from PDF files using multiple PDF proc
 
 1. Clone or download this repository
 2. Navigate to the project directory
-3. Install required dependencies:
+3. Create and activate a virtual environment:
+
+```bash
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+```
+
+4. Install required dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
+### Quick Setup (Windows)
+
+For Windows users, you can use the provided batch file:
+
+```bash
+# Run the activation script
+activate_env.bat
+```
+
 ## Usage
 
-### Basic Usage
+### Sales Data Extraction
 
-1. Place your PDF files in the `input` directory
-2. Run the script:
+1. Place your CMZ weekly sales PDF files in the `input/WeeklySales/` directory
+2. Run the extraction script:
 
 ```bash
-python CMZ_Sales.py
+python extract_sales_data.py
 ```
 
-3. Extracted data will be saved in the `output` directory
+This script will:
+- Process all PDF files in `input/WeeklySales/` directory
+- Extract Document Date, Document Number, Description, Locality, and Total
+- Output results in JSON format matching the template structure
+- Save results to `output/weekly_sales_data.json`
 
-### Command Line Options
+### Output Format
 
-```bash
-python CMZ_Sales.py [OPTIONS]
+The script extracts the following fields:
+- **Document Date**: Date from the PDF
+- **Document Number**: Reference number from the PDF
+- **Description**: Formatted as "Chain Supermarket [Locality] - Wk[Week] ([StartDate]-[EndDate])"
+- **Locality**: Location name (e.g., Tarxien, Fgura, Zabbar)
+- **Total**: Sales amount in euros
 
-Options:
-  -i, --input DIR     Input directory containing PDF files (default: input)
-  -o, --output DIR    Output directory for extracted data (default: output)
-  -f, --format FORMAT Output format: excel, csv, or json (default: excel)
-  -v, --verbose       Enable verbose logging
-  -h, --help          Show help message
-```
+### Example Output
 
-### Examples
-
-```bash
-# Process PDFs from custom input directory
-python CMZ_Sales.py --input /path/to/pdfs --output /path/to/results
-
-# Export results as CSV
-python CMZ_Sales.py --format csv
-
-# Enable verbose logging
-python CMZ_Sales.py --verbose
+```json
+[
+  {
+    "Document Date": "30/6/25",
+    "Document Number": "Chaintrx-2025224",
+    "Description": "Chain Supermarket Tarxien - Wk24 (08.06.25-14.06.25)",
+    "Locality": "Tarxien",
+    "Total": "€13,769.01"
+  }
+]
 ```
 
 ## Project Structure
 
 ```
 CMZ_Sales/
-├── CMZ_Sales.py          # Main extraction script
+├── extract_sales_data.py # Main extraction script
 ├── requirements.txt      # Python dependencies
 ├── README.md            # This file
 ├── .gitignore           # Git ignore file
-├── input/               # Directory for input PDF files
+├── input/               # Directory for input files
+│   ├── WeeklySales/     # PDF files to process
+│   └── JSON_Template_Sales.json # Template structure
 └── output/              # Directory for extracted data
 ```
 
-## Output Formats
-
-### Excel Format (.xlsx)
-- **Summary Sheet**: Overview of processed files
-- **Text_Content Sheet**: Extracted text from all PDFs
-- **Tables Sheet**: All extracted tables combined
-
-### CSV Format (.csv)
-- Single file with flattened data structure
-- Includes filename, processing info, and content
+## Output Format
 
 ### JSON Format (.json)
-- Complete data structure with nested tables
-- Preserves original data relationships
+- Clean data structure matching the template
+- One record per PDF file processed
+- All required fields extracted and formatted
 
 ## Dependencies
 
-- **PyPDF2**: Basic PDF text extraction
-- **pdfplumber**: Advanced PDF processing with table extraction
-- **pandas**: Data manipulation and analysis
-- **openpyxl**: Excel file handling
+- **pdfplumber**: PDF processing and text extraction
+- **pandas**: Data manipulation (for potential future enhancements)
 - **python-dotenv**: Environment variable management
 
 ## Error Handling
 
-The script includes comprehensive error handling:
+The script includes error handling:
 - Missing dependencies are detected and reported
 - Individual PDF processing errors don't stop the entire batch
-- All errors are logged to both console and log file
-- Error information is included in output files
-
-## Logging
-
-Logs are written to:
-- Console output (INFO level by default)
-- `cmz_sales.log` file (all levels)
-
-Use `--verbose` flag for detailed debug information.
+- All errors are logged to console output
+- Processing continues even if individual files fail
 
 ## Troubleshooting
 
@@ -133,9 +138,9 @@ Use `--verbose` flag for detailed debug information.
 
 ### PDF Compatibility
 
-- **pdfplumber**: Best for PDFs with tables and complex layouts
-- **PyPDF2**: Good for simple text extraction
-- Some PDFs may require specific processing methods
+- **pdfplumber**: Optimized for CMZ weekly sales PDF format
+- Handles the specific structure of CMZ sales invoices
+- Extracts text and parses structured data reliably
 
 ## Contributing
 
