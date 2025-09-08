@@ -1,4 +1,4 @@
-# CMZ Sales PDF Data Extraction
+# CMZ Weekly Sales PDF Data Extraction
 
 A simple Python script for extracting sales data from CMZ weekly sales PDF files.
 
@@ -48,7 +48,7 @@ activate_env.bat
 
 ## Usage
 
-### Sales Data Extraction
+### Weekly Sales Data Extraction
 
 1. Place your CMZ weekly sales PDF files in the `input/WeeklySales/` directory
 2. Run the extraction script:
@@ -95,7 +95,7 @@ CMZ_Sales/
 ├── README.md            # This file
 ├── .gitignore           # Git ignore file
 ├── input/               # Directory for input files
-│   ├── WeeklySales/     # PDF files to process
+│   ├── WeeklySales/     # Weekly sales PDF files
 │   └── JSON_Template_Sales.json # Template structure
 └── output/              # Directory for extracted data
 ```
@@ -129,12 +129,12 @@ The script includes error handling:
    - Install dependencies: `pip install -r requirements.txt`
 
 2. **"No PDF files found in input directory"**
-   - Ensure PDF files are in the `input` directory
+   - Ensure PDF files are in the `input/WeeklySales/` directory
    - Check file extensions are `.pdf`
 
 3. **Permission errors**
    - Ensure write permissions for output directory
-   - Close any open Excel files before running
+   - Close any open files before running
 
 ### PDF Compatibility
 
@@ -158,5 +158,5 @@ This project is open source. Please check the license file for details.
 
 For issues and questions:
 1. Check the troubleshooting section
-2. Review log files for error details
+2. Review console output for error details
 3. Create an issue in the repository

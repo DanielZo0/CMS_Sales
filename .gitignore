@@ -133,8 +133,6 @@ dmypy.json
 
 # Project specific
 input/*.pdf
-output/*.xlsx
-output/*.csv
 output/*.json
 *.log
 
