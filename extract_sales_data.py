@@ -12,6 +12,15 @@ from pathlib import Path
 from typing import Dict, List, Any
 
 
+def _create_supplier_mapping() -> Dict[str, str]:
+    """Create a mapping from locality to supplier code"""
+    return {
+        "Fgura": "CHAINFGU",
+        "Tarxien": "CHAINTAR", 
+        "Zabbar": "CHAINZAB"
+    }
+
+
 def extract_sales_data_from_pdf(pdf_path: str) -> Dict[str, Any]:
     """
     Extract sales data from a single PDF file.
@@ -29,10 +38,14 @@ def extract_sales_data_from_pdf(pdf_path: str) -> Dict[str, Any]:
             
             # Initialize result dictionary
             result = {
+                "Document Type": "SI",
                 "Document Date": "",
+                "Supplier Code": "",
+                "Empty Column": "",
                 "Document Number": "",
                 "Description": "",
-                "Locality": "",
+                "NC": "4001",
+                "VC": "T0",
                 "Total": ""
             }
             
@@ -46,11 +59,16 @@ def extract_sales_data_from_pdf(pdf_path: str) -> Dict[str, Any]:
             if doc_num_match:
                 result["Document Number"] = doc_num_match.group(1)
             
-            # Extract Locality from the address first (needed for description)
+            # Extract Locality from the address first (needed for description and supplier code)
             # Look for the locality pattern (e.g., "Tarxien, TXN 9044" or "Fgura, FGR 1242")
             locality_match = re.search(r'([A-Za-z]+),\s+[A-Z]{2,4}\s+\d+', text)
             if locality_match:
-                result["Locality"] = locality_match.group(1)
+                locality = locality_match.group(1)
+                result["Locality"] = locality
+                
+                # Determine supplier code based on locality
+                supplier_mapping = _create_supplier_mapping()
+                result["Supplier Code"] = supplier_mapping.get(locality, "")
             
             # Extract Description (Invoice description)
             desc_match = re.search(r'Invoice for week (\d+)\s+([^\n]+)', text)
@@ -87,17 +105,21 @@ def extract_sales_data_from_pdf(pdf_path: str) -> Dict[str, Any]:
             # Extract Total amount - look for the amount after "Invoice for week"
             total_match = re.search(r'Invoice for week \d+[^€]*€([0-9,]+\.?\d*)', text)
             if total_match:
-                result["Total"] = f"€{total_match.group(1)}"
+                result["Total"] = total_match.group(1)
             
             return result
             
     except Exception as e:
         print(f"Error processing {pdf_path}: {e}")
         return {
+            "Document Type": "SI",
             "Document Date": "",
+            "Supplier Code": "",
+            "Empty Column": "",
             "Document Number": "",
             "Description": "",
-            "Locality": "",
+            "NC": "4001",
+            "VC": "T0",
             "Total": ""
         }
 
@@ -136,7 +158,7 @@ def process_weekly_sales_pdfs(input_dir: str = "input/WeeklySales") -> List[Dict
     return results
 
 
-def save_to_json(data: List[Dict[str, Any]], output_file: str = "output/weekly_sales_data.json"):
+def save_to_json(data: List[Dict[str, Any]], output_file: str = "output/json/weekly_sales_data.json"):
     """
     Save extracted data to JSON file.
     
@@ -147,8 +169,14 @@ def save_to_json(data: List[Dict[str, Any]], output_file: str = "output/weekly_s
     output_path = Path(output_file)
     output_path.parent.mkdir(exist_ok=True)
     
+    # Filter out locality from the output data
+    filtered_data = []
+    for record in data:
+        filtered_record = {k: v for k, v in record.items() if k != "Locality"}
+        filtered_data.append(filtered_record)
+    
     with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+        json.dump(filtered_data, f, indent=2, ensure_ascii=False)
     
     print(f"Data saved to: {output_path}")
 
@@ -171,7 +199,8 @@ def main():
         for i, data in enumerate(sales_data, 1):
             print(f"\nRecord {i}:")
             for key, value in data.items():
-                print(f"  {key}: {value}")
+                if key != "Locality":  # Suppress locality from display
+                    print(f"  {key}: {value}")
     else:
         print("No data extracted")
 

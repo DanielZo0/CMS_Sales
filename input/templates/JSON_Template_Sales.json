@@ -1,7 +1,12 @@
 {
+	"Document Type": "SI",
 	"Document Date": "extract_date",
+	"Supplier Code": "extract_supplier_code",
+	"Empty Column": "",
 	"Document Number": "extract_reference",
 	"Description": "extract_description",
+	"NC": "4001",
+	"VC": "T0",
 	"Locality": "extract_locality",
-	"Total": "",
+	"Total": ""
 }
