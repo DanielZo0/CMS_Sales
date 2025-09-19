@@ -1,0 +1,35 @@
+[
+	{
+		"Document Type": "",
+		"Document Date": "extract_date",
+		"Supplier Code": "CHAINFGU",
+		"Document Number": "extract_reference",
+		"Description": "extract_description",
+		"NC": "7102",
+		"VC": "T6",
+		"Net": "extract_net",
+		"VAT": "extract_vat"
+	},
+	{
+		"Document Type": "",
+		"Document Date": "extract_date",
+		"Supplier Code": "CHAINTAR",
+		"Document Number": "extract_reference",
+		"Description": "extract_description",
+		"NC": "7101",
+		"VC": "T6",
+		"Net": "extract_net",
+		"VAT": "extract_vat"
+	},
+	{
+		"Document Type": "",
+		"Document Date": "extract_date",
+		"Supplier Code": "CHAINZAB",
+		"Document Number": "extract_reference",
+		"Description": "extract_description",
+		"NC": "7103",
+		"VC": "T6",
+		"Net": "extract_net",
+		"VAT": "extract_vat"
+	}
+]

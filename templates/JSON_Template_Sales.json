@@ -1,0 +1,35 @@
+[
+	{
+		"Document Type": "",
+		"Document Date": "extract_date",
+		"Supplier Code": "CHAINFGU",
+		"Empty_Column": "",
+		"Document Number": "extract_reference",
+		"Description": "extract_description",
+		"NC": "4002",
+		"VC": "T0",
+		"Total": ""
+	},
+	{
+		"Document Type": "",
+		"Document Date": "extract_date",
+		"Supplier Code": "CHAINTAR",
+		"Empty_Column": "",
+		"Document Number": "extract_reference",
+		"Description": "extract_description",
+		"NC": "4001",
+		"VC": "T0",
+		"Total": ""
+	},
+	{
+		"Document Type": "",
+		"Document Date": "extract_date",
+		"Supplier Code": "CHAINZAB",
+		"Empty_Column": "",
+		"Document Number": "extract_reference",
+		"Description": "extract_description",
+		"NC": "4003",
+		"VC": "T0",
+		"Total": ""
+	}
+]

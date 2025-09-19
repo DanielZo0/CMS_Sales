@@ -1,0 +1,14 @@
+[
+	{
+		"Type": "",
+		"Account Reference": "supplier_code",
+		"Nominal A/C Ref": "NC_extract",
+		"Department Code": "",
+		"Date": "extract_date",
+		"Reference": "extract_reference",
+		"Details": "extract_description",
+		"Net Amount": "extract_net",
+		"Tax Code": "T0",
+		"Tax Amount": "extract_vat"
+	}
+]

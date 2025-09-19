@@ -1,0 +1,24 @@
+Data Type,Document Type,Document Date,Supplier Code,Empty_Column,Document Number,Description,NC,VC,Locality,Net,VAT,Total
+Expenses,,05/05/25,CHAINTAR,,DEL/18/2025,Chain Supermarket Tarxien - Rent for Week 18 2025,7101,T6,,2904.64,522.84,3427.48
+Expenses,,05/05/25,CHAINFGU,,DEL/18/2025,Chain Supermarket Fgura - Rent for Week 18 2025,7102,T6,,2406.45,433.16,2839.61
+Expenses,,05/05/25,CHAINZAB,,DEL/18/2025,Chain Supermarket Zabbar - Rent for Week 18 2025,7103,T6,,896.31,161.34,1057.65
+Expenses,,05/05/25,CHAINZAB,,DEL/19/2025,Chain Supermarket Zabbar - Rent for Week 19 2025,7103,T6,,969.67,174.54,1144.21
+Expenses,,12/05/25,CHAINTAR,,DEL/19/2025,Chain Supermarket Tarxien - Rent for Week 19 2025,7101,T6,,2911.50,524.07,3435.57
+Expenses,,12/05/25,CHAINFGU,,DEL/19/2025,Chain Supermarket Fgura - Rent for Week 19 2025,7102,T6,,2406.88,433.24,2840.12
+Expenses,,19/05/25,CHAINTAR,,DEL/20/2025,Chain Supermarket Tarxien - Rent for Week 20 2025,7101,T6,,2958.59,532.55,3491.14
+Expenses,,19/05/25,CHAINFGU,,DEL/20/2025,Chain Supermarket Fgura - Rent for Week 20 2025,7102,T6,,2436.60,438.59,2875.19
+Expenses,,19/05/25,CHAINZAB,,DEL/20/2025,Chain Supermarket Zabbar - Rent for Week 20 2025,7103,T6,,962.25,173.20,1135.45
+Expenses,,26/05/25,CHAINTAR,,DEL/21/2025,Chain Supermarket Tarxien - Rent for Week 21 2025,7101,T6,,3040.39,547.27,3587.66
+Expenses,,26/05/25,CHAINFGU,,DEL/21/2025,Chain Supermarket Fgura - Rent for Week 21 2025,7102,T6,,2389.41,430.09,2819.50
+Expenses,,26/05/25,CHAINZAB,,DEL/21/2025,Chain Supermarket Zabbar - Rent for Week 21 2025,7103,T6,,957.39,172.33,1129.72
+Sales,,31/5/25,CHAINTAR,,Chaintrx-2025219,Chain Supermarket Tarxien - Wk19 (04.05.25-10.05.25),4001,T0,Tarxien,14557.49,0.00,14557.49
+Sales,,31/5/25,CHAINTAR,,Chaintrx-202522,Chain Supermarket Tarxien - Wk22 (25.05.25-31.05.25),4001,T0,Tarxien,13606.46,0.00,13606.46
+Sales,,31/5/25,CHAINFGU,,Chainfgura-202521,Chain Supermarket Fgura - Wk21 (18.05.25-24.05.25),4002,T0,Fgura,11947.06,0.00,11947.06
+Sales,,31/5/25,CHAINFGU,,Chainfgura-202520,Chain Supermarket Fgura - Wk20 (11.05.25-17.05.25),4002,T0,Fgura,12182.99,0.00,12182.99
+Sales,,31/5/25,CHAINFGU,,Chainfgura-202519,Chain Supermarket Fgura - Wk19 (04.05.25-10.05.25),4002,T0,Fgura,12034.39,0.00,12034.39
+Sales,,31/5/25,CHAINTAR,,Chaintrx-202521,Chain Supermarket Tarxien - Wk21 (18.05.25-24.05.25),4001,T0,Tarxien,15201.93,0.00,15201.93
+Sales,,31/5/25,CHAINTAR,,Chaintrx-202520,Chain Supermarket Tarxien - Wk20 (11.05.25-17.05.25),4001,T0,Tarxien,14792.94,0.00,14792.94
+Sales,,31/5/25,CHAINZAB,,Chainzbr-202521,Chain Supermarket Zabbar - Wk21 (18.05.25-24.05.25),4003,T0,Zabbar,4786.93,0.00,4786.93
+Sales,,31/5/25,CHAINZAB,,Chainzbr-202520,Chain Supermarket Zabbar - Wk20 (11.05.25-17.05.25),4003,T0,Zabbar,4811.23,0.00,4811.23
+Sales,,31/5/25,CHAINZAB,,Chainzbr-202519,Chain Supermarket Zabbar - Wk19 (04.05.25-10.05.25),4003,T0,Zabbar,4848.35,0.00,4848.35
+Sales,,31/5/25,CHAINZAB,,Chainzbr-202519,Chain Supermarket Zabbar - Wk19 (04.05.25-10.05.25),4003,T0,Zabbar,4848.35,0.00,4848.35

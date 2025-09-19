@@ -1,0 +1,24 @@
+Type,Account Reference,Nominal A/C Ref,Department Code,Date,Reference,Details,Net Amount,Tax Code,Tax Amount
+,CHAINTAR,4001,,31/05/2025,Chaintrx-2025219,Chain Supermarket Tarxien - Wk19 (04.05.25-10.05.25),14557.49,T0,0.00
+,CHAINTAR,4001,,31/05/2025,Chaintrx-202522,Chain Supermarket Tarxien - Wk22 (25.05.25-31.05.25),13606.46,T0,0.00
+,CHAINFGU,4002,,31/05/2025,Chainfgura-202521,Chain Supermarket Fgura - Wk21 (18.05.25-24.05.25),11947.06,T0,0.00
+,CHAINFGU,4002,,31/05/2025,Chainfgura-202520,Chain Supermarket Fgura - Wk20 (11.05.25-17.05.25),12182.99,T0,0.00
+,CHAINFGU,4002,,31/05/2025,Chainfgura-202519,Chain Supermarket Fgura - Wk19 (04.05.25-10.05.25),12034.39,T0,0.00
+,CHAINTAR,4001,,31/05/2025,Chaintrx-202521,Chain Supermarket Tarxien - Wk21 (18.05.25-24.05.25),15201.93,T0,0.00
+,CHAINTAR,4001,,31/05/2025,Chaintrx-202520,Chain Supermarket Tarxien - Wk20 (11.05.25-17.05.25),14792.94,T0,0.00
+,CHAINZAB,4003,,31/05/2025,Chainzbr-202521,Chain Supermarket Zabbar - Wk21 (18.05.25-24.05.25),4786.93,T0,0.00
+,CHAINZAB,4003,,31/05/2025,Chainzbr-202520,Chain Supermarket Zabbar - Wk20 (11.05.25-17.05.25),4811.23,T0,0.00
+,CHAINZAB,4003,,31/05/2025,Chainzbr-202519,Chain Supermarket Zabbar - Wk19 (04.05.25-10.05.25),4848.35,T0,0.00
+,CHAINZAB,4003,,31/05/2025,Chainzbr-202519,Chain Supermarket Zabbar - Wk19 (04.05.25-10.05.25),4848.35,T0,0.00
+,CHAINTAR,7101,,05/05/2025,DEL/18/2025,Chain Supermarket Tarxien - Rent for Week 18 2025,2904.64,T0,522.84
+,CHAINTAR,7101,,12/05/2025,DEL/19/2025,Chain Supermarket Tarxien - Rent for Week 19 2025,2911.50,T0,524.07
+,CHAINTAR,7101,,19/05/2025,DEL/20/2025,Chain Supermarket Tarxien - Rent for Week 20 2025,2958.59,T0,532.55
+,CHAINTAR,7101,,26/05/2025,DEL/21/2025,Chain Supermarket Tarxien - Rent for Week 21 2025,3040.39,T0,547.27
+,CHAINFGU,7102,,05/05/2025,DEL/18/2025,Chain Supermarket Fgura - Rent for Week 18 2025,2406.45,T0,433.16
+,CHAINFGU,7102,,12/05/2025,DEL/19/2025,Chain Supermarket Fgura - Rent for Week 19 2025,2406.88,T0,433.24
+,CHAINFGU,7102,,19/05/2025,DEL/20/2025,Chain Supermarket Fgura - Rent for Week 20 2025,2436.60,T0,438.59
+,CHAINFGU,7102,,26/05/2025,DEL/21/2025,Chain Supermarket Fgura - Rent for Week 21 2025,2389.41,T0,430.09
+,CHAINZAB,7103,,05/05/2025,DEL/18/2025,Chain Supermarket Zabbar - Rent for Week 18 2025,896.31,T0,161.34
+,CHAINZAB,7103,,05/05/2025,DEL/19/2025,Chain Supermarket Zabbar - Rent for Week 19 2025,969.67,T0,174.54
+,CHAINZAB,7103,,19/05/2025,DEL/20/2025,Chain Supermarket Zabbar - Rent for Week 20 2025,962.25,T0,173.20
+,CHAINZAB,7103,,26/05/2025,DEL/21/2025,Chain Supermarket Zabbar - Rent for Week 21 2025,957.39,T0,172.33
